@@ -88,6 +88,7 @@ func (c *APIClient) content(ctx context.Context, url string, in interface{}, out
 			return contents, err
 		}
 	}
+	// fmt.Println("header: %q", resp.Header)
 
 	return ioutil.ReadAll(resp.Body)
 }
